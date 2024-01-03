@@ -202,7 +202,7 @@ class _HomePageState extends State<HomePage>
                   // ),
                   const Gap(10),
                   Container(
-                    height: MediaQuery.of(context).size.height / 7.5,
+                    height: MediaQuery.of(context).size.height / 7,
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                       border: Border.all(
@@ -211,72 +211,76 @@ class _HomePageState extends State<HomePage>
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 8),
-                          child: Text(
-                            'ON THE WEB',
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold,
-                              color: const Color(0xFF4B0082),
-                              fontSize: 16,
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 30, vertical: 8),
+                            child: Text(
+                              'ON THE WEB',
+                              style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.bold,
+                                color: const Color(0xFF4B0082),
+                                fontSize: 16,
+                              ),
                             ),
                           ),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            IconButton(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          const linkedinPage(),
-                                    ));
-                              },
-                              icon: const FaIcon(FontAwesomeIcons.linkedin),
-                              color: const Color(0xFF4B0082),
-                              iconSize: 35,
-                            ),
-                            IconButton(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const githubPage(),
-                                    ));
-                              },
-                              icon: const FaIcon(FontAwesomeIcons.github),
-                              color: const Color(0xFF4B0082),
-                              iconSize: 35,
-                            ),
-                            IconButton(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          const facebookPage(),
-                                    ));
-                              },
-                              icon: const FaIcon(FontAwesomeIcons.facebook),
-                              color: const Color(0xFF4B0082),
-                              iconSize: 35,
-                            ),
-                            IconButton(
-                              onPressed: () {},
-                              icon: const FaIcon(
-                                  FontAwesomeIcons.squareInstagram),
-                              color: const Color(0xFF4B0082),
-                              iconSize: 35,
-                            )
-                          ],
-                        ),
-                      ],
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              IconButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const linkedinPage(),
+                                      ));
+                                },
+                                icon: const FaIcon(FontAwesomeIcons.linkedin),
+                                color: const Color(0xFF4B0082),
+                                iconSize: 35,
+                              ),
+                              IconButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const githubPage(),
+                                      ));
+                                },
+                                icon: const FaIcon(FontAwesomeIcons.github),
+                                color: const Color(0xFF4B0082),
+                                iconSize: 35,
+                              ),
+                              IconButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const facebookPage(),
+                                      ));
+                                },
+                                icon: const FaIcon(FontAwesomeIcons.facebook),
+                                color: const Color(0xFF4B0082),
+                                iconSize: 35,
+                              ),
+                              IconButton(
+                                onPressed: () {},
+                                icon: const FaIcon(
+                                    FontAwesomeIcons.squareInstagram),
+                                color: const Color(0xFF4B0082),
+                                iconSize: 35,
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   const Gap(20),
