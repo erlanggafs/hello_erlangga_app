@@ -327,7 +327,7 @@ class _HomePageState extends State<HomePage>
                               ),
                             ),
                             Text(
-                              '+62 898-9522-537',
+                              '+62 898-9502-769',
                               style: GoogleFonts.poppins(
                                 fontWeight: FontWeight.bold,
                                 color: const Color(0xFF4B0082),
